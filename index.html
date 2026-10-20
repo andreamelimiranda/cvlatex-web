@@ -46,7 +46,7 @@
 .mini-line.small{width:65%}
 .mini-title{height:5px;background:var(--mini-accent);margin:5px 0 8px}
 .mini-line.bold{height:5px;background:#667180}
-.mini-page.elegant .mini-head{background:#111827}.mini-page.elegant .mini-title{height:2px;background:#5700b5}
+.mini-page.elegant .mini-head{background:#333;width:65%;height:8px;margin-left:auto;margin-right:auto}.mini-page.elegant .mini-sub{margin-left:auto;margin-right:auto;width:56%;margin-bottom:13px}.mini-page.elegant .mini-cols{grid-template-columns:67% 28%}.mini-page.elegant .mini-cols>span:last-child{border-left:1px solid #d8d3cc;padding-left:6px}.mini-page.elegant .mini-title{height:2px;background:#99836c}
 .mini-page.modern{--mini-accent:#174c70}.mini-page.modern:before{content:"";position:absolute;right:0;top:0;bottom:0;width:35%;background:#e8f0f5}
 .mini-page.modern>*{position:relative}.mini-page.modern .mini-cols{grid-template-columns:65% 30%}
 .mini-page.ats .mini-cols{display:block}.mini-page.ats .mini-head{background:#111827}.mini-page.ats .mini-title{height:1px;background:#a9afb7;margin:9px 0}.mini-page.ats .mini-sub{margin-bottom:8px}
@@ -57,14 +57,34 @@
 @media(max-width:900px){.template-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.template-grid{grid-template-columns:1fr}.template-card{min-height:210px}.mini-page{height:160px}#templateChooser{padding:18px 14px}.chooser-shell h1{font-size:26px}}
 /* Original intact; variants are scoped to the selected paper */
-.paper.template-classic{color:#252932;--line:#e4e4e7}
-.template-classic .name{color:#18191f;font-weight:900;letter-spacing:.15px}
-.template-classic .subtitle{color:var(--accent)}
-.template-classic .cv-section h3{font-size:20px;letter-spacing:.25px}
-.template-classic .section-rule{height:2px!important;min-height:2px}
-.template-classic .job-title{font-weight:700;font-size:15px}
-.template-classic .job-separator{background:#e7e7e7;height:1px;margin:14px 0 19px}
-.template-classic .sideitem b{color:#242b35}
+/* Clásico elegante: composición editorial, distinta de la plantilla original */
+.paper.template-classic{color:#292725;--line:#ddd5ca;font-family:Georgia,"Times New Roman",serif;padding:17mm 17mm 16mm}
+.template-classic .name{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:36px;letter-spacing:1.1px;line-height:1.12;text-transform:none;color:#232326;text-align:center;margin:0 0 8px}
+.template-classic .subtitle{font-family:"Lato",Arial,sans-serif;color:#6b625c;font-weight:400;font-size:13px;letter-spacing:2px;text-transform:uppercase;text-align:center}
+.template-classic .contacts{justify-content:center;font-family:"Lato",Arial,sans-serif;color:#585450;font-size:10px;gap:5px 14px;margin:13px 0 26px;border-top:1px solid #d8d3cc;border-bottom:1px solid #d8d3cc;padding:10px 0}
+.template-classic .contact-icon{color:#78695d}
+.template-classic .cv-header-with-photo{grid-template-columns:96px minmax(0,1fr);gap:15px;min-height:108px}
+.template-classic .cv-header-with-photo .cv-photo{width:96px;height:108px;border-radius:0;border:1px solid #d8d3cc}
+.template-classic .cv-header-with-photo .name,.template-classic .cv-header-with-photo .subtitle{text-align:left}
+.template-classic .cv-header-with-photo .contacts{justify-content:flex-start;margin:10px 0 19px;padding:8px 0}
+.template-classic .cvcols{grid-template-columns:minmax(0,69%) minmax(0,26%);gap:5%}
+.template-classic .cvcols>div{border-left:1px solid #d8d3cc;padding-left:17px}
+.template-classic .cv-section{margin-top:17px}
+.template-classic .cv-section h3,.template-classic .cvcols>div .cv-section h3{font-family:"Lato",Arial,sans-serif;font-size:11px!important;font-weight:900;letter-spacing:2.1px;color:#786453;line-height:1.35;text-transform:uppercase;margin:0}
+.template-classic .section-rule,.template-classic .cvcols>div .section-rule{height:1px!important;min-height:1px!important;background:#d8d3cc!important;margin:7px 0 16px!important}
+.template-classic .job{margin-bottom:12px}
+.template-classic .job-title{font-family:Georgia,"Times New Roman",serif;color:#272421;font-weight:700;font-size:15px;line-height:1.3}
+.template-classic .job-company{font-family:"Lato",Arial,sans-serif;color:#756353;font-weight:700;font-size:11.4px;margin:5px 0}
+.template-classic .job-meta{font-family:"Lato",Arial,sans-serif;font-size:10px;color:#77706a;margin:5px 0 7px}
+.template-classic .job-meta i{color:#7c6c60}
+.template-classic .description{font-family:Georgia,"Times New Roman",serif;font-size:11.3px;line-height:1.44;color:#3d3935}
+.template-classic .job-separator{background:transparent;border-bottom:1px solid #e2ddd6;height:1px;margin:12px 0 16px}
+.template-classic .sideitem,.template-classic .availability-item,.template-classic .education-item{font-family:"Lato",Arial,sans-serif;font-size:10.8px;line-height:1.45;color:#3e3a37}
+.template-classic .sideitem b,.template-classic .education-item b{color:#2b2724;font-weight:700}
+.template-classic .skill-entry{grid-template-columns:15px minmax(0,1fr);gap:5px}
+.template-classic .skill-entry>.skill-icon{font-size:12px;color:#8a7969}
+.template-classic .dotted-separator{background:none;border-bottom:1px solid #e4dfda;height:1px;margin:8px 0 11px}
+@media print{.paper.template-classic{padding:17mm 17mm 16mm}}
 .paper.template-modern{padding:12.8mm 12.7mm}
 .template-modern .cvcols{grid-template-columns:minmax(0,64%) minmax(0,32%);gap:4%;align-items:start}
 .template-modern .cvcols>div{background:#eff3f7;padding:12px 13px;border-radius:5px;min-width:0}
@@ -105,7 +125,7 @@
 <header><strong>CV<span style="color:#75d4ff">LaTeX</span></strong><small>Editor profesional de currículums · 4 estilos</small></header>
 <div id="templateChooser" role="dialog" aria-modal="true" aria-labelledby="templateTitle"><div class="chooser-shell"><div class="chooser-eyebrow">CVLaTeX · Diseños profesionales</div><h1 id="templateTitle">Elige tu estilo de currículum</h1><p>Selecciona una de las cuatro plantillas para comenzar. Después podrás cambiar el diseño sin perder tus datos.</p><div class="template-grid" id="templateGrid">
 <button type="button" class="template-card" data-template="original"><span class="mini-page"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><strong>Original</strong><span class="template-description">Nuestro diseño actual: dos columnas, acentos morados, iconos y separadores.</span></button>
-<button type="button" class="template-card" data-template="classic"><span class="mini-page elegant"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><strong>Clásico elegante</strong><span class="template-description">Tipografía sobria, nombre en negro y acentos de color más delicados.</span></button>
+<button type="button" class="template-card" data-template="classic"><span class="mini-page elegant"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><strong>Clásico elegante</strong><span class="template-description">Diseño editorial con tipografía clásica, encabezado centrado y columna lateral fina.</span></button>
 <button type="button" class="template-card" data-template="modern"><span class="mini-page modern"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><strong>Moderno profesional</strong><span class="template-description">Encabezado más marcado, barra lateral suave y estética corporativa.</span></button>
 <button type="button" class="template-card" data-template="ats"><span class="mini-page ats"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line"></span></span></span></span><strong>Minimalista ATS</strong><span class="template-description">Una sola columna, sin iconos ni foto, pensado para facilitar la lectura automática.</span></button>
 </div></div></div>
