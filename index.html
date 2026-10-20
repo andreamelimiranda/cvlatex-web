@@ -77,7 +77,7 @@ function savePhotoCrop(){const canvas=document.getElementById('photoCropCanvas')
 function setupPhotoEditor(){
  const canvas=document.getElementById('photoCropCanvas');if(!canvas)return;
  const src=getPhotoSource(),seq=++cropSeq;
- if(cropImage&&cropImageSource===src){paintPhotoEditor()}else{cropImage=null;cropImageSource=src;const img=new Image();img.onload=()=>{if(seq!==cropSeq)return;cropImage=img;paintPhotoEditor()};img.src=src}
+ if(cropImage&&cropImageSource===src){paintPhotoEditor()}else{cropImage=null;cropImageSource=src;const img=new Image();img.onload=()=>{if(seq!==cropSeq)return;cropImage=img;paintPhotoEditor();savePhotoCrop()};img.src=src}
  let drag=null;
  canvas.onpointerdown=e=>{if(!cropImage)return;drag={x:e.clientX,y:e.clientY,ox:data.photoOffsetX||0,oy:data.photoOffsetY||0};canvas.setPointerCapture(e.pointerId)};
  canvas.onpointermove=e=>{if(!drag||!cropImage)return;const rect=canvas.getBoundingClientRect();data.photoOffsetX=drag.ox+(e.clientX-drag.x)*330/rect.width;data.photoOffsetY=drag.oy+(e.clientY-drag.y)*378/rect.height;paintPhotoEditor()};
@@ -117,7 +117,7 @@ try{await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;i
 const canvas=document.createElement('canvas');const ratio=Math.min(1,1400/Math.max(img.naturalWidth,img.naturalHeight));canvas.width=Math.max(1,Math.round(img.naturalWidth*ratio));canvas.height=Math.max(1,Math.round(img.naturalHeight*ratio));canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
 data.photoSource=canvas.toDataURL('image/jpeg',0.85);data.photoZoom=1;data.photoOffsetX=0;data.photoOffsetY=0;data.photoEnabled=true;
 data.photo=data.photoSource;cropImage=null;cropImageSource='';drawForm();drawPreview();
-await new Promise(resolve=>setTimeout(resolve,60));savePhotoCrop();
+
 }catch(err){console.error(err);alert('No se pudo cargar la fotografía. Prueba otra imagen.')}
 });
 document.getElementById('form').addEventListener('click',e=>{if(e.target.id==='photoRemove'){data.photo='';data.photoSource='';data.photoZoom=1;data.photoOffsetX=0;data.photoOffsetY=0;data.photoEnabled=false;cropImage=null;drawForm();save()}else if(e.target.id==='photoRecenter'){data.photoZoom=1;data.photoOffsetX=0;data.photoOffsetY=0;drawForm();savePhotoCrop()}});
