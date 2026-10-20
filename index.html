@@ -311,8 +311,12 @@ header{background:#141d35;padding:16px clamp(20px,4vw,58px);box-shadow:0 5px 30p
 @media print{
   .cv-fit-toolbar,.cv-fit-hint{display:none!important}
   .paper{zoom:var(--cv-fit-scale,1)!important;min-height:0!important;transform:none!important}
-  .cvcols{break-inside:avoid-page;page-break-inside:avoid}
-  .cvcols>div{break-inside:avoid-page;page-break-inside:avoid}
+  /* Nunca mantener las DOS columnas como un bloque indivisible:
+     en Chrome eso deja la primera página casi vacía. */
+  .cvcols,.cvcols>main,.cvcols>div{break-inside:auto!important;page-break-inside:auto!important}
+  .cv-section{break-inside:auto;page-break-inside:auto}
+  .job,.education-item,.sideitem{break-inside:avoid;page-break-inside:avoid}
+  .paper{overflow:visible!important}
 }
 @media(max-width:700px){.cv-fit-toolbar{gap:8px}.cv-fit-toolbar label{width:100%}}
 </style></head><body>
