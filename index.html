@@ -336,6 +336,27 @@ header{background:#141d35;padding:16px clamp(20px,4vw,58px);box-shadow:0 5px 30p
   html,body{min-height:0!important}
 }
 @media(max-width:700px){.cv-fit-toolbar{gap:8px}.cv-fit-toolbar label{width:100%}}
+
+/* Impresión moderna aislada: nunca fragmentar el grid de la hoja en páginas distintas */
+#micvPrintPage{display:none}
+@media print{
+ body.micv-print-modern{width:210mm!important;height:296mm!important;min-height:0!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#fff!important}
+ body.micv-print-modern > *:not(#micvPrintPage){display:none!important}
+ body.micv-print-modern #micvPrintPage{display:block!important;position:absolute!important;inset:0 auto auto 0!important;width:210mm!important;height:296mm!important;margin:0!important;padding:0!important;overflow:hidden!important;break-before:avoid!important;break-after:avoid!important}
+ body.micv-print-modern #micvPrintPage>.paper{
+  position:absolute!important;left:0!important;top:0!important;
+  width:210mm!important;min-height:0!important;height:auto!important;
+  max-height:none!important;margin:0!important;
+  zoom:1!important;transform:scale(var(--micv-output-scale,1))!important;
+  transform-origin:top left!important;box-shadow:none!important;
+  overflow:visible!important;break-inside:auto!important;page-break-inside:auto!important;
+ }
+ body.micv-print-modern #micvPrintPage .cvcols,
+ body.micv-print-modern #micvPrintPage .cvcols>main,
+ body.micv-print-modern #micvPrintPage .cvcols>div{
+  break-inside:auto!important;page-break-inside:auto!important
+ }
+}
 </style></head><body>
 <header><button type="button" id="homeLogo" class="brand-home" aria-label="MICV: volver a elegir plantilla" title="Volver a elegir plantilla">MI<span style="color:#75d4ff">CV</span></button></header>
 <div id="templateChooser" role="dialog" aria-modal="true" aria-labelledby="templateTitle"><div class="chooser-shell"><section class="chooser-hero" aria-label="Bienvenida a MICV"><div><div class="hero-kicker"><span class="hero-kicker-star">✦</span> DISEÑA TU PRÓXIMA OPORTUNIDAD <span class="hero-kicker-star">✦</span></div><h1>Un gran futuro merece un <span class="hero-highlight">gran currículum.</span></h1><p>Crea un CV profesional que hable de ti. Elige un diseño, personalízalo en minutos y descárgalo gratis.</p><div class="hero-actions"><button type="button" class="hero-cta" id="heroStart">Crear mi currículum <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button type="button" class="hero-secondary-cta" id="heroExplore">Explorar diseños <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></button></div><div class="hero-trust"><span><i class="fa-solid fa-circle-check"></i> Sin registro</span><span><i class="fa-solid fa-circle-check"></i> Sin marcas de agua</span><span><i class="fa-solid fa-circle-check"></i> Descarga PDF</span></div></div><div class="hero-stage" id="heroStage" aria-label="Muestra interactiva de plantillas MICV">
@@ -640,6 +661,41 @@ heroStage.addEventListener('mouseenter',stopHeroRotation);
 heroStage.addEventListener('mouseleave',startHeroRotation);
 document.getElementById('heroExplore').addEventListener('click',()=>document.getElementById('chooseSection').scrollIntoView({behavior:'smooth',block:'start'}));
 showHeroStyle('modern');startHeroRotation();
+
+
+/* Al imprimir el diseño Moderno se crea una hoja A4 independiente del editor.
+   El grid no participa en la paginación del navegador. */
+const micvPrintPage=document.createElement('div');
+micvPrintPage.id='micvPrintPage';micvPrintPage.setAttribute('aria-hidden','true');
+document.body.appendChild(micvPrintPage);
+function prepareMicvPrint(){
+ if(currentTemplate()!=='modern'){
+  document.body.classList.remove('micv-print-modern');
+  micvPrintPage.replaceChildren();
+  return;
+ }
+ const original=document.getElementById('paper');
+ const copy=original.cloneNode(true);
+ copy.removeAttribute('id');
+ copy.style.removeProperty('zoom');
+ copy.style.removeProperty('transform');
+ copy.style.removeProperty('--cv-fit-scale');
+ copy.style.removeProperty('--cv-print-real-scale');
+ micvPrintPage.replaceChildren(copy);
+ document.body.classList.add('micv-print-modern');
+ // En modo print ya se aplican las dimensiones A4 al clon.
+ const height=Math.max(1,copy.scrollHeight);
+ const requested=Math.max(.35,Math.min(1.1,(Number(data.printScale)||100)/100));
+ const safeA4Height=1090;
+ const fitted=Math.min(requested,safeA4Height/height);
+ copy.style.setProperty('--micv-output-scale',String(Math.max(.35,fitted)));
+}
+function clearMicvPrint(){
+ document.body.classList.remove('micv-print-modern');
+ micvPrintPage.replaceChildren();
+}
+window.addEventListener('beforeprint',prepareMicvPrint);
+window.addEventListener('afterprint',clearMicvPrint);
 
 drawForm();drawPreview();showTemplateChooser();if(innerWidth<=680)mobileView("edit");
 </script></body></html>
