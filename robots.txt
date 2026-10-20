@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://micv.mrtz.workers.dev/sitemap.xml
