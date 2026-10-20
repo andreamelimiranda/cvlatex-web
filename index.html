@@ -124,18 +124,112 @@
 
 /* Información pública: páginas de ayuda y transparencia */
 .public-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px 19px;font-size:12px;margin:20px auto 0;padding:12px 16px;color:#52677f}.public-links a{color:#274c70;text-decoration:none;font-weight:700}.public-links a:hover{text-decoration:underline}.site-footer{max-width:1500px;margin:15px auto 28px;padding:15px;border-top:1px solid #d9e1e9}.chooser-info{margin-top:27px!important;background:#ffffffb3;border-radius:12px;max-width:760px}.public-links .muted-note{font-weight:400;color:#69788a}@media print{.site-footer,.public-links{display:none!important}}
+
+/* MICV 3.0: experiencia premium sin modificar los diseños A4 */
+:root{--ui-ink:#182640;--ui-purple:#7954d8;--ui-soft:#f6f4ff}
+body{background:linear-gradient(160deg,#f5f7ff,#f0f3fa 60%,#f7f6ff)}
+header{background:#141d35;padding:16px clamp(20px,4vw,58px);box-shadow:0 5px 30px #141d3510}
+.brand-home{letter-spacing:-.5px;font-size:26px}
+#templateChooser{background:radial-gradient(ellipse at 85% 0%,#e6dcff 0,transparent 42%),linear-gradient(145deg,#f7f9ff 0%,#eef1fa 100%);padding:0 20px 60px}
+.chooser-shell{max-width:1220px}
+.chooser-hero{margin:22px auto 32px;padding:clamp(28px,4.5vw,60px);background:radial-gradient(ellipse at 88% 2%,#6c59ab77 0,transparent 42%),linear-gradient(120deg,#141d35,#1c2c4b 70%,#2b2b61);border-radius:28px;color:white;display:grid;grid-template-columns:1.12fr .88fr;gap:35px;align-items:center;box-shadow:0 24px 55px #1b255028;position:relative;overflow:hidden}
+.chooser-hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff17;border-radius:50%;right:-160px;top:-190px;pointer-events:none}
+.hero-kicker{color:#c6b4ff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.chooser-hero h1{color:white;font-size:clamp(34px,4vw,56px);line-height:1.08;letter-spacing:-1.4px;margin:17px 0}
+.chooser-hero p{color:#ced5e7;font-size:16px;line-height:1.62;margin:0 0 23px;max-width:520px}
+.hero-cta{border:0;border-radius:30px;background:#aa8cff;font-size:14px;color:#171d32;padding:14px 23px;box-shadow:0 8px 21px #0509202e;font-weight:900;cursor:pointer}
+.hero-cta:hover{transform:translateY(-2px);background:#c2afff}
+.hero-trust{display:flex;gap:15px;flex-wrap:wrap;margin-top:17px;color:#d9ddef;font-size:12px}
+.hero-trust i{color:#91e3c0}
+.hero-papers{height:300px;position:relative;display:flex;align-items:center;justify-content:center;perspective:1000px}
+.hero-paper{position:absolute;width:183px;height:255px;background:#fff;border-radius:9px;box-shadow:0 15px 32px #0005;padding:24px 18px;transform:rotate(5deg) translateX(52px);border:1px solid #fff}
+.hero-paper.back{transform:rotate(-12deg) translateX(-70px) translateY(9px);opacity:.8}
+.hero-paper.front{transform:rotate(5deg) translateX(52px);z-index:2}
+.hero-paper .mini-head{height:9px;background:#1c4569;width:80%}.hero-paper .mini-title{background:#7754bc}
+.chooser-intro{text-align:center;margin:10px 0 23px}
+.chooser-intro .chooser-eyebrow{color:#7550c6}
+.chooser-intro h2{font-size:clamp(24px,3vw,34px);color:#1c2742;margin:8px 0}
+.chooser-intro p{font-size:14px;color:#5f6e83;max-width:560px;margin:auto}
+.template-grid{gap:20px}
+.template-card{border-radius:18px;padding:13px 13px 17px;min-height:342px;box-shadow:0 8px 22px #23314d10;transition:transform .18s ease,box-shadow .18s ease}
+.template-card:hover{box-shadow:0 15px 32px #39216d24}
+.template-card strong{font-size:16px;letter-spacing:-.2px}
+.template-card .mini-page{height:220px}
+.template-card .template-description{line-height:1.55}
+.popular-tag{background:#ede5ff;color:#6941b1}
+.chooser-info{background:transparent!important;margin-top:24px!important}
+.chooser-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 12px}
+.chooser-benefit{background:white;border:1px solid #e8eaf3;border-radius:16px;padding:18px;display:flex;align-items:flex-start;gap:12px;color:#52647b;font-size:12px}
+.chooser-benefit i{color:#7954d8;font-size:19px;margin-top:2px}
+.chooser-benefit b{display:block;color:#1c2742;font-size:14px;margin-bottom:3px}
+.app{max-width:1630px;grid-template-columns:minmax(330px,400px) minmax(520px,1fr);gap:18px;margin:21px auto}
+.app aside{border:1px solid #e8e9f5;box-shadow:0 10px 35px #192b5110;border-radius:18px;max-height:calc(100vh - 95px);padding:20px}
+.app aside h1{font-size:22px;letter-spacing:-.6px}
+.app aside .template-summary{line-height:1.4}
+.editor-headline{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.editor-kicker{font-size:11px;color:#7651ba;letter-spacing:1.1px;font-weight:900;text-transform:uppercase}
+#templateOpen{border-radius:24px;padding:8px 12px;font-size:11px}
+.editor-status{font-size:12px;color:#4f7a66;background:#eaf8ee;border-radius:30px;padding:5px 9px;display:inline-flex;gap:6px;align-items:center}
+.editor-nav{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0 12px}
+.editor-nav button{background:#f2f4fa;color:#53647a;padding:8px 10px;font-size:12px;border-radius:999px}
+.editor-nav button.active{background:#1d3153;color:white}
+.editor-progress{height:6px;background:#e9e7f4;border-radius:20px;overflow:hidden;margin:13px 0 5px}
+.editor-progress>div{height:100%;background:linear-gradient(90deg,#7752c9,#a78aff);transition:width .25s;width:0}
+.editor-progress-label{font-size:11px;color:#7b8496}
+.form-panel{display:none;animation:panel-in .23s ease}
+.form-panel.active{display:block}
+@keyframes panel-in{from{opacity:.35;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.form-panel>h2{font-size:16px;margin:17px 0;border:0;color:#2c3557}
+.form-panel label{font-size:12px}
+.form-panel input,.form-panel textarea{border-color:#e1e3ec;background:#fbfcff}
+.form-panel input:focus,.form-panel textarea:focus{outline:2px solid #9b82d3;outline-offset:1px}
+.editor-add-row{display:none;gap:7px;margin:12px 0;flex-wrap:wrap}
+.editor-add-row button{padding:9px 12px;font-size:12px}
+.editor-add-row button:not(.visible-add){display:none}
+.editor-add-row .visible-add{display:inline-block}
+.editor-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0 5px}
+.preset-color{width:26px;height:26px;border-radius:50%;border:2px solid white;outline:1px solid #d3d9e5;cursor:pointer;padding:0}
+.preset-color[aria-pressed="true"]{outline:2px solid #293656;outline-offset:2px}
+.editor-tips{background:#f3f0fc;border:1px solid #ece4fd;border-radius:13px;padding:13px;margin:13px 0;font-size:12px;line-height:1.6;color:#4d4169}
+.editor-tips b{color:#523185}
+.editor-tips button{font-size:11px;background:white;color:#6f4aac;border:1px solid #d5c5f4;padding:5px 8px;margin-top:7px}
+.preview-wrap{padding:0 3px 20px}
+.preview-top{background:#fff;padding:12px 15px;border:1px solid #e8edf4;border-radius:13px;box-shadow:0 4px 16px #1c304510}
+.preview-top b{font-size:14px;color:#1b3450}
+.preview-toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.preview-toolbar button{font-size:12px;border-radius:9px;padding:8px 10px}
+.preview-toolbar select{font-size:12px;width:auto;padding:8px 9px}
+#previewZoomLabel{font-size:12px;color:#63738b}
+.paper-viewport{overflow:auto;max-width:100%;min-height:350px;padding:10px 0 28px;scrollbar-width:thin}
+.paper-zoom-wrap{width:max-content;max-width:none;margin:auto;transform-origin:top left}
+#paper{margin:0 auto}
+.paper [data-edit-section]{cursor:pointer;border-radius:2px;transition:box-shadow .15s}
+.paper [data-edit-section]:hover{box-shadow:0 0 0 2px #a994dd55}
+.review-overlay[hidden]{display:none!important}
+.review-overlay{position:fixed;inset:0;background:#101b31bb;z-index:100;display:flex;align-items:center;justify-content:center;padding:16px}
+.review-modal{background:white;border-radius:20px;padding:26px;max-width:520px;width:100%;max-height:85vh;overflow:auto;box-shadow:0 20px 70px #070e2b55}
+.review-modal h2{font-size:24px;margin:0 0 10px;border:0}
+.review-modal ul{padding-left:20px;color:#4e5c71;font-size:13px}
+.review-modal li{margin:11px 0}
+.review-modal .review-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.mobile-bar{display:none}
+@media(max-width:1000px){.app{grid-template-columns:1fr;max-width:850px}.app aside{max-height:none}.chooser-hero{grid-template-columns:1.1fr .9fr}.hero-papers{height:240px}.hero-paper{transform:scale(.86) rotate(5deg) translateX(44px)}.hero-paper.back{transform:scale(.86) rotate(-12deg) translateX(-63px)}}
+@media(max-width:680px){#templateChooser{padding:0 12px 85px}.chooser-hero{margin-top:12px;padding:26px 22px;grid-template-columns:1fr;border-radius:20px}.chooser-hero h1{font-size:35px}.hero-papers{height:158px}.hero-paper{transform:scale(.55) rotate(5deg) translateX(90px)}.hero-paper.back{transform:scale(.55) rotate(-12deg) translateX(-100px)}.chooser-benefits{grid-template-columns:1fr;gap:9px}.template-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.template-card{min-height:285px;padding:10px}.template-card .mini-page{height:160px}.app{margin:12px auto;padding:0 10px}.app aside{padding:14px}.row{grid-template-columns:1fr}.mobile-bar{display:flex;position:fixed;z-index:35;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e2e7f0;padding:9px 12px max(9px,env(safe-area-inset-bottom));justify-content:space-around;gap:8px;box-shadow:0 -5px 28px #1d2a4010}.mobile-bar button{flex:1;background:#f3f5fa;color:#42536b;font-size:12px;border-radius:13px;padding:11px 7px}.mobile-bar button.active{background:#231b45;color:white}body.mobile-show-preview #editorApp aside{display:none}body.mobile-show-edit #editorApp .preview-wrap{display:none}.site-footer{padding-bottom:85px}.preview-top{position:relative}.paper-viewport{overflow:auto}.template-card .template-description{font-size:11px}}
+@media(max-width:420px){.template-grid{grid-template-columns:1fr}.template-card .mini-page{height:145px}.chooser-hero h1{font-size:31px}}
+@media print{body{background:#fff!important}.mobile-bar,.review-overlay,.editor-tools,.preview-toolbar{display:none!important}.paper-viewport{overflow:visible!important;padding:0!important;margin:0!important;min-height:0!important}.paper-zoom-wrap{transform:none!important;width:auto!important;height:auto!important}.preview-wrap{display:block!important}.paper{transform:none!important}body.mobile-show-edit #editorApp .preview-wrap{display:block!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
 </style></head><body>
 <header><button type="button" id="homeLogo" class="brand-home" aria-label="MICV: volver a elegir plantilla" title="Volver a elegir plantilla">MI<span style="color:#75d4ff">CV</span></button></header>
-<div id="templateChooser" role="dialog" aria-modal="true" aria-labelledby="templateTitle"><div class="chooser-shell"><div class="chooser-eyebrow">Diseños profesionales</div><h1 id="templateTitle">Elige tu estilo de currículum</h1><p>Selecciona una de las cuatro plantillas para comenzar. Después podrás cambiar el diseño sin perder tus datos.</p><div class="template-grid" id="templateGrid">
+<div id="templateChooser" role="dialog" aria-modal="true" aria-labelledby="templateTitle"><div class="chooser-shell"><section class="chooser-hero" aria-label="Bienvenida a MICV"><div><div class="hero-kicker">DISEÑA TU PRÓXIMA OPORTUNIDAD</div><h1>Un gran futuro merece un gran currículum.</h1><p>Crea un CV profesional que hable de ti. Elige un diseño, personalízalo en minutos y descárgalo gratis.</p><button type="button" class="hero-cta" id="heroStart">Crear mi currículum <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><div class="hero-trust"><span><i class="fa-solid fa-circle-check"></i> Sin registro</span><span><i class="fa-solid fa-circle-check"></i> Sin marcas de agua</span><span><i class="fa-solid fa-circle-check"></i> Descarga PDF</span></div></div><div class="hero-papers" aria-hidden="true"><div class="hero-paper back"><div class="mini-head"></div><div class="mini-sub"></div><div class="mini-title"></div><div class="mini-line bold"></div><div class="mini-line"></div><div class="mini-line small"></div><div class="mini-title"></div><div class="mini-line"></div><div class="mini-line"></div></div><div class="hero-paper front"><div class="mini-head"></div><div class="mini-sub"></div><div class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line"></span><span class="mini-title"></span><span class="mini-line"></span></span></div></div></div></section><section class="chooser-intro" id="chooseSection"><div class="chooser-eyebrow">SOLO CUATRO DISEÑOS · TODOS GRATUITOS</div><h2 id="templateTitle">Elige el estilo que te representa</h2><p>El mismo contenido, cuatro formas de presentarte. Puedes cambiar de diseño sin perder tu información.</p></section><div class="template-grid" id="templateGrid">
 <button type="button" class="template-card" data-template="modern"><span class="mini-page modern"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><span class="popular-tag"><i class="fa-solid fa-star" aria-hidden="true"></i> Más popular</span><strong>Moderno profesional</strong><span class="template-description">Encabezado más marcado, barra lateral suave y estética corporativa.</span></button>
 <button type="button" class="template-card" data-template="original"><span class="mini-page"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><strong>Original</strong><span class="template-description">Nuestro diseño actual: dos columnas, acentos morados, iconos y separadores.</span></button>
 <button type="button" class="template-card" data-template="classic"><span class="mini-page elegant"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><strong>Clásico elegante</strong><span class="template-description">Diseño editorial con tipografía clásica, encabezado centrado y columna lateral fina.</span></button>
 <button type="button" class="template-card" data-template="ats"><span class="mini-page ats"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line"></span></span></span></span><strong>Minimalista ATS</strong><span class="template-description">Una sola columna, sin iconos ni foto, pensado para facilitar la lectura automática.</span></button>
-</div><nav class="public-links chooser-info" aria-label="Información del sitio"><a href="guia-cv.html">Consejos para tu CV</a><a href="privacidad.html">Privacidad</a><a href="contacto.html">Contacto</a></nav></div></div>
-<div class="app" id="editorApp"><aside><button id="templateOpen" class="secondary" type="button">← Cambiar plantilla</button><h1>Personaliza tu currículum</h1><p class="template-summary" id="templateSummary"></p><p class="hint">Tu información permanece en este navegador. Cambia textos y colores y descarga tu CV.</p>
-<div id="form"></div><div class="btns"><button id="addJob">+ Experiencia</button><button id="addSkill" class="secondary">+ Conocimiento</button><button id="addLang" class="secondary">+ Idioma</button><button id="addEdu" class="secondary">+ Educación</button></div>
+</div><div class="chooser-benefits"><div class="chooser-benefit"><i class="fa-solid fa-bolt"></i><div><b>Edita en tiempo real</b>Visualiza cada cambio antes de descargar.</div></div><div class="chooser-benefit"><i class="fa-solid fa-palette"></i><div><b>Tu estilo, tus colores</b>Personaliza sin perder un diseño profesional.</div></div><div class="chooser-benefit"><i class="fa-solid fa-lock"></i><div><b>Tu CV en tu navegador</b>No necesitas crear una cuenta.</div></div></div><nav class="public-links chooser-info" aria-label="Información del sitio"><a href="guia-cv.html">Consejos para tu CV</a><a href="privacidad.html">Privacidad</a><a href="contacto.html">Contacto</a></nav></div></div>
+<div class="app" id="editorApp"><aside><div class="editor-headline"><div><div class="editor-kicker">ESTUDIO DE DISEÑO</div><h1>Tu currículum, a tu manera</h1></div><button id="templateOpen" class="secondary" type="button">Cambiar estilo</button></div><p class="template-summary" id="templateSummary"></p><div class="editor-status" id="saveStatus"><i class="fa-solid fa-circle-check"></i> Borrador en tu navegador</div><div class="editor-progress"><div id="editorProgressFill"></div></div><div class="editor-progress-label" id="editorProgressLabel">Completa tus datos</div><nav class="editor-nav" id="editorNav" aria-label="Secciones del currículum"></nav><div id="contextTips" class="editor-tips" aria-live="polite"></div>
+<div id="form"></div><div class="btns editor-add-row" id="addButtons"><button id="addJob">+ Experiencia</button><button id="addSkill" class="secondary">+ Conocimiento</button><button id="addLang" class="secondary">+ Idioma</button><button id="addEdu" class="secondary">+ Educación</button></div>
 <h2>Descargar</h2><div class="btns"><button id="pdf">⬇ Guardar PDF</button><button id="tex" class="secondary">Descargar LaTeX (.tex)</button><button id="reset" class="secondary">Restablecer ejemplo</button></div><p class="hint">El PDF se obtiene mediante la opción «Guardar como PDF» de tu navegador. El archivo .tex se puede compilar con LuaLaTeX o XeLaTeX. La fotografía se incluye en el PDF obtenido desde el navegador; aún no se incluye en el archivo .tex. La compilación LaTeX en el servidor todavía no está habilitada.</p></aside>
-<section class="preview-wrap"><div class="preview-top"><b>Vista previa de tu CV</b></div><article id="paper" class="paper"></article></section></div>
+<section class="preview-wrap"><div class="preview-top"><b>Vista previa de tu CV</b><div class="preview-toolbar"><select id="quickTemplate" aria-label="Cambiar diseño"><option value="modern">Moderno profesional</option><option value="original">Original</option><option value="classic">Clásico elegante</option><option value="ats">Minimalista ATS</option></select><button class="secondary" id="zoomOut" type="button" aria-label="Alejar">−</button><span id="previewZoomLabel">100%</span><button class="secondary" id="zoomIn" type="button" aria-label="Acercar">+</button><button id="reviewCv" type="button"><i class="fa-solid fa-list-check"></i> Revisar CV</button></div></div><div class="paper-viewport" id="paperViewport"><div class="paper-zoom-wrap" id="paperZoomWrap"><article id="paper" class="paper"></article></div></div></section></div><div class="mobile-bar" id="mobileBar"><button type="button" id="mobileEdit" class="active"><i class="fa-solid fa-pen-to-square"></i> Editar</button><button type="button" id="mobilePreview"><i class="fa-regular fa-file-lines"></i> Vista previa</button><button type="button" id="mobileDownload"><i class="fa-solid fa-download"></i> Descargar</button></div><div class="review-overlay" id="reviewOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="reviewTitle"><div class="review-modal"><div class="editor-kicker">CONTROL DE CALIDAD</div><h2 id="reviewTitle">Revisa antes de descargar</h2><p class="hint">Estas comprobaciones te ayudan a detectar omisiones; no evalúan tu idoneidad laboral.</p><ul id="reviewList"></ul><div class="review-actions"><button type="button" id="reviewDownload">Continuar al PDF</button><button type="button" class="secondary" id="reviewClose">Seguir editando</button></div></div></div>
 <footer class="site-footer"><nav class="public-links" aria-label="Información de MICV"><a href="guia-cv.html">Guía para crear tu CV</a><a href="privacidad.html">Política de privacidad</a><a href="contacto.html">Contacto</a><span class="muted-note">MICV · Editor de currículums gratuito</span></nav></footer>
 <script>
 const example={name:"NOMBRE APELLIDO",role:"Operaciones | Logística | Gestión de inventario",email:"correo@ejemplo.com",phone:"+56 9 1234 5678",whatsapp:"+56 9 1234 5678",city:"Santiago, Chile",linkedin:"linkedin.com/in/ejemplo",accent:"#5700b5",template:"original",photo:"",photoSource:"",photoZoom:1,photoOffsetX:0,photoOffsetY:0,photoEnabled:false,secondary:"#667788",availability:"Jornada completa o parcial | Turnos a convenir",jobs:[{title:"Operaria de bodega / Capacitación",company:"Empresa de logística",dates:"2023 – 2026",place:"Santiago, Chile",description:"• Preparación y control de pedidos mediante sistemas WMS y radiofrecuencia.\n• Capacitación de personal nuevo y seguimiento de indicadores de calidad."},{title:"Operaria de bodega",company:"Empresa de distribución",dates:"2020 – 2023",place:"Santiago, Chile",description:"• Recepción de mercadería, picking, packing, inventarios y preparación para despacho."}],skills:[{title:"Sistemas y herramientas",detail:"WMS, ERP, radiofrecuencia (RF), Excel"},{title:"Logística e inventarios",detail:"Picking, packing, FIFO/FEFO y control de stock"},{title:"Competencias",detail:"Trabajo en equipo, capacitación y organización"}],languages:[{title:"Español",detail:"Nativo"},{title:"Inglés",detail:"Intermedio"}],education:[{title:"Educación media completa",detail:"Licencia de Educación Media · 2018"}]};
