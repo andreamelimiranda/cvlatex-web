@@ -14,13 +14,11 @@ Editor gratuito de currículums inspirado en un CV profesional de dos columnas.
 **Importante:** El botón PDF actualmente usa la impresión del navegador: el PDF todavía no está compilado directamente desde LaTeX. La plantilla LaTeX y la vista previa HTML pueden tener diferencias de diseño.
 
 ## Publicación
-El proyecto no requiere proceso de compilación de frontend. Para publicarlo en Cloudflare Pages, conecta el repositorio y configura:
-- Framework preset: None
-- Production branch: main
-- Build command: exit 0 (o ninguno cuando sea permitido)
-- Output directory: .
+El sitio se publica en **Cloudflare Workers** (Worker `micv`, dominio `micvpremium.cl`) usando recursos estáticos, sin proceso de compilación. La configuración está en `wrangler.jsonc`: la carpeta publicada es la raíz del repositorio.
 
-Cada cambio confirmado en main se publicará automáticamente tras completar el despliegue.
+- Cada cambio confirmado en `main` se publica automáticamente cuando el Worker está conectado al repositorio en Cloudflare.
+- Los archivos internos (`README.md`, `wrangler.jsonc`, `.github/`, etc.) se excluyen de la publicación mediante `.assetsignore`.
+- El sitio ya no se publica en GitHub Pages, para evitar contenido duplicado en dos direcciones.
 
 ## Privacidad
 Los datos del CV se guardan únicamente en el almacenamiento local del navegador. No se envían a ningún backend en esta versión.

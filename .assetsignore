@@ -1,0 +1,6 @@
+# Archivos internos del proyecto que no deben publicarse en micvpremium.cl
+.git
+.github
+.assetsignore
+README.md
+wrangler.jsonc
