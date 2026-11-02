@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MICV | Crea tu currículum profesional</title><meta name="description" content="Crea tu currículum gratis con MICV. Elige entre cuatro plantillas, edita en línea y descarga tu CV en PDF, sin registro."><link rel="canonical" href="https://micvpremium.cl/"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"><style>
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Lato:wght@400;700;900&display=swap");
 :root{font-family:"Lato",Arial,sans-serif;color:#142338;background:#eef2f7}*{box-sizing:border-box}body{margin:0}header{background:#11263e;color:white;padding:17px 30px;display:flex;align-items:center;justify-content:space-between}header strong{font-size:23px}.brand-home{appearance:none;background:transparent;border:0;padding:0;border-radius:3px;color:white;font-family:inherit;font-size:23px;font-weight:700;cursor:pointer;line-height:1.15}.brand-home:hover{filter:brightness(1.12)}.brand-home:focus-visible{outline:2px solid #75d4ff;outline-offset:5px}header small{color:#b5c8da}.app{display:grid;grid-template-columns:minmax(290px,410px) minmax(500px,1fr);gap:24px;max-width:1500px;margin:24px auto;padding:0 18px}aside{background:white;border-radius:16px;padding:20px;box-shadow:0 3px 15px #182b4318;max-height:calc(100vh - 100px);overflow:auto}h1{font-size:21px;margin:0 0 6px}h2{font-size:15px;color:#24415c;margin:22px 0 10px;border-bottom:1px solid #e5eaf0;padding-bottom:7px}label{display:block;font-size:12px;font-weight:700;margin:11px 0 4px;color:#45576d}input,textarea{width:100%;border:1px solid #ced7e3;border-radius:8px;padding:9px 10px;font:inherit;font-size:13px;background:white}textarea{min-height:70px;resize:vertical}button{border:0;background:#153b5c;color:white;padding:10px 13px;border-radius:8px;font-weight:600;cursor:pointer}button.secondary{background:#edf3f8;color:#1d4565}button.remove{background:#ffe9e9;color:#ae2525;padding:5px 9px;font-size:12px}button:hover{filter:brightness(.94)}.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.editor-card{border:1px solid #e3e8ef;border-radius:9px;padding:11px;margin:10px 0}.hint{font-size:12px;color:#68788d;line-height:1.5}.preview-wrap{overflow:auto}.preview-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}.preview-top span{font-size:13px;color:#4f6073}.paper{background:white;width:210mm;min-height:297mm;margin:0 auto;padding:12.8mm 12.7mm;box-shadow:0 5px 30px #1c2f4c24;font-family:"Lato",Arial,sans-serif;--accent:#5700b5;--muted:#667788;--line:#dbe3e9;color:#242b31;font-weight:400;font-size:10.7px;line-height:1.22}
 .cv-header-with-photo{display:grid;grid-template-columns:110px minmax(0,1fr);column-gap:17px;align-items:start;min-height:126px;margin-bottom:4px}.cv-photo{display:block;width:110px;height:126px;object-fit:cover;object-position:center 22%;border-radius:5px;border:1px solid #e2e2e2;background:#f6f6f6;print-color-adjust:exact;-webkit-print-color-adjust:exact}.cv-photo-text{min-width:0}.cv-header-with-photo .name{font-size:29px;overflow-wrap:anywhere}.cv-header-with-photo .contacts{margin-bottom:7px}.photo-controls{border:1px solid #e3e8ef;border-radius:10px;padding:12px;margin-top:9px}.photo-controls .photo-choice{display:flex;align-items:center;gap:9px;font-size:13px;cursor:pointer}.photo-controls .photo-choice input{width:17px;height:17px;flex-shrink:0;accent-color:#5700b5}.photo-controls input[type=file]{font-size:12px;padding:7px;margin-top:9px}.photo-controls button{margin-top:9px}.photo-controls .photo-note{font-size:11px;color:#667788;line-height:1.45;margin-top:8px}.photo-edit{margin-top:12px}.photo-crop-canvas{display:block;width:165px;height:189px;max-width:100%;background:#e8ebf1;border:1px solid #ccd5e1;border-radius:6px;cursor:grab;touch-action:none;user-select:none}.photo-crop-canvas:active{cursor:grabbing}.photo-zoom-label{display:flex;justify-content:space-between;gap:8px;margin-top:12px}.photo-zoom{width:100%;accent-color:#5700b5}.photo-edit-actions{display:flex;gap:8px}.photo-crop-help{font-size:11px;color:#667788;margin:7px 0 0}.name{font-family:"Lato",Arial,sans-serif;font-size:32.95px;line-height:1.08;letter-spacing:0;font-weight:700;color:var(--accent);text-transform:uppercase;margin-bottom:5px}
 .subtitle{font-size:14.35px;line-height:1.18;color:#30383e;font-weight:700}
@@ -357,19 +357,126 @@ header{background:#141d35;padding:16px clamp(20px,4vw,58px);box-shadow:0 5px 30p
   break-inside:auto!important;page-break-inside:auto!important
  }
 }
+
+/* ===== Portada nueva: «Tu próximo trabajo empieza en esta hoja» ===== */
+.nh-hero{--cobalto:#1E37E6;--cobalto-osc:#14249E;--lima:#D9FF4D;--tinta:#0E1440;--papel:#FFFFFF;
+ position:relative;isolation:isolate;overflow:hidden;margin:22px auto 34px;border-radius:28px;
+ display:grid;grid-template-columns:1.02fr .98fr;gap:24px;align-items:center;min-height:560px;
+ padding:clamp(28px,4.6vw,64px);color:#fff;
+ background:radial-gradient(circle at 82% 18%,#3F5BFF 0,transparent 46%),radial-gradient(circle at 8% 100%,#0F1FA8 0,transparent 55%),var(--cobalto);
+ box-shadow:0 30px 60px -28px #1428b8aa}
+.nh-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background-image:linear-gradient(#ffffff12 1px,transparent 1px),linear-gradient(90deg,#ffffff12 1px,transparent 1px);background-size:28px 28px;
+ mask-image:linear-gradient(100deg,#000 0,#0008 60%,#000)}
+.nh-copy{position:relative;z-index:3;min-width:0;animation:nhIn .8s cubic-bezier(.2,.7,.3,1) both}
+.nh-kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#E8ECFF;background:#ffffff14;border:1px solid #ffffff2b;padding:7px 13px 7px 11px;border-radius:999px}
+.nh-pulse{width:8px;height:8px;border-radius:50%;background:var(--lima);box-shadow:0 0 0 0 #d9ff4d99;animation:nhPulse 2s infinite}
+.nh-hero h1{font-family:"Bricolage Grotesque","Lato",Arial,sans-serif;font-weight:800;font-size:clamp(38px,5.2vw,70px);line-height:.98;letter-spacing:-2px;margin:22px 0 18px;color:#fff;text-wrap:balance}
+.nh-mark{position:relative;color:var(--tinta);white-space:nowrap;padding:0 .12em;z-index:0}
+.nh-mark:before{content:"";position:absolute;z-index:-1;left:-.04em;right:-.06em;top:.12em;bottom:.02em;background:var(--lima);border-radius:6px 14px 8px 12px;transform:rotate(-1.4deg) scaleX(0);transform-origin:left;animation:nhMark .7s .55s cubic-bezier(.3,.9,.3,1) forwards}
+.nh-hero p{font-size:17px;line-height:1.6;color:#DCE2FF;max-width:520px;margin:0 0 28px}
+.nh-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.nh-cta{display:inline-flex;align-items:center;gap:14px;border:0;cursor:pointer;font:900 16px "Lato",Arial,sans-serif;color:var(--tinta);background:var(--lima);padding:17px 24px;border-radius:14px;box-shadow:0 5px 0 #9DBB1E,0 18px 30px -12px #0008;transition:transform .15s,box-shadow .15s}
+.nh-cta:hover{transform:translateY(-2px);box-shadow:0 7px 0 #9DBB1E,0 22px 34px -12px #0009}
+.nh-cta:active{transform:translateY(4px);box-shadow:0 1px 0 #9DBB1E,0 8px 16px -10px #0008}
+.nh-cta i{transition:transform .2s}.nh-cta:hover i{transform:translateX(4px)}
+.nh-ghost{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font:700 15px "Lato",Arial,sans-serif;color:#fff;background:transparent;border:2px solid #ffffff55;padding:14px 20px;border-radius:14px;transition:background .2s,border-color .2s}
+.nh-ghost:hover{background:#ffffff14;border-color:#fff}
+.nh-cta:focus-visible,.nh-ghost:focus-visible,.nh-switch button:focus-visible{outline:3px solid var(--lima);outline-offset:3px}
+.nh-trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px;padding:0;margin:24px 0 0;font-size:14px;color:#E5E9FF}
+.nh-trust i{color:var(--lima);margin-right:4px}
+/* Escenario */
+.nh-stage{position:relative;z-index:2;min-width:0;height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+ --acc:#174c70;--side:#e8f0f5;--nameF:"Lato",Arial,sans-serif}
+.nh-stage[data-variant="original"]{--acc:#5B2FB0;--side:#ffffff}
+.nh-stage[data-variant="classic"]{--acc:#6E5A46;--side:#ffffff;--nameF:Georgia,"Times New Roman",serif}
+.nh-stage[data-variant="ats"]{--acc:#111827;--side:#ffffff}
+.nh-desk{position:relative;width:300px;height:400px}
+.nh-sheet{position:absolute;inset:0;background:var(--papel);border-radius:6px}
+.nh-back{box-shadow:0 18px 40px -16px #000a}
+.nh-back-2{transform:rotate(-9deg) translate(-26px,10px);background:#DDE3FF}
+.nh-back-1{transform:rotate(5deg) translate(22px,6px);background:#F3F5FF}
+.nh-front{padding:24px 22px;color:#253344;overflow:hidden;box-shadow:0 30px 60px -20px #000b;transform:rotate(-1.5deg);animation:nhFloat 7s ease-in-out infinite;font-family:"Lato",Arial,sans-serif}
+.nh-top{display:flex;gap:12px;align-items:center;padding-bottom:12px;margin-bottom:12px;border-bottom:2px solid var(--acc)}
+.nh-photo{flex:0 0 46px;height:52px;border-radius:5px;background:linear-gradient(150deg,#C9D9F2,#EEF1FF);display:flex;align-items:center;justify-content:center;color:#7E93B6;font-size:24px}
+.nh-id{min-width:0;flex:1}
+.nh-name{font-family:var(--nameF);font-size:20px;font-weight:900;color:var(--acc);letter-spacing:-.3px;min-height:25px;white-space:nowrap;overflow:hidden}
+.nh-caret{display:inline-block;width:2px;height:18px;margin-left:2px;vertical-align:-3px;background:var(--acc);animation:nhBlink .9s steps(1) infinite}
+.nh-role{font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;margin:3px 0;color:#3A4A60}
+.nh-contact{font-size:8px;color:#8494A8}
+.nh-body{display:grid;grid-template-columns:60% 36%;gap:4%}
+.nh-side{background:var(--side);border-radius:4px;padding:8px 8px}
+.nh-h{font-size:9px;font-weight:900;letter-spacing:1px;text-transform:uppercase;color:var(--acc);border-bottom:1px solid currentColor;padding-bottom:3px;margin-bottom:7px}
+.nh-mt{margin-top:12px}
+.nh-job{font-size:10.5px;font-weight:800;color:#26344A}
+.nh-place{font-size:8.5px;color:var(--acc);margin:2px 0 6px}
+.nh-small{font-size:9px;color:#3A4A60}
+.nh-line{display:block;height:4px;border-radius:2px;background:#DCE3EC;margin:7px 0;width:0;transition:width .5s cubic-bezier(.3,.8,.3,1)}
+.nh-skills{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+.nh-skills li{font-size:9px;font-weight:700;color:#2C3A50;background:#fff;border:1px solid #D9E1EC;border-radius:999px;padding:3px 7px;animation:nhPop .35s cubic-bezier(.3,1.5,.5,1) both}
+.nh-role,.nh-contact,.nh-job,.nh-place,.nh-small,.nh-h{opacity:0;transform:translateY(4px);transition:opacity .35s,transform .35s}
+.nh-front.is-writing .nh-role{transition-delay:.05s}.nh-front.is-writing .nh-contact{transition-delay:.15s}
+.nh-front.is-writing .nh-main>.nh-h:first-child,.nh-front.is-writing .nh-side>.nh-h:first-child{transition-delay:.3s}
+.nh-front.is-writing #nhJob{transition-delay:.45s}.nh-front.is-writing #nhPlace{transition-delay:.55s}
+.nh-front.is-writing .nh-main>.nh-mt,.nh-front.is-writing .nh-side>.nh-mt{transition-delay:1.25s}
+.nh-front.is-writing #nhEdu{transition-delay:1.4s}.nh-front.is-writing #nhLang{transition-delay:1.5s}
+.nh-front.is-writing :is(.nh-role,.nh-contact,.nh-job,.nh-place,.nh-small,.nh-h){opacity:1;transform:none}
+.nh-front.is-writing .l1{width:100%;transition-delay:.7s}.nh-front.is-writing .l2{width:88%;transition-delay:.85s}.nh-front.is-writing .l3{width:72%;transition-delay:1s}.nh-front.is-writing .l4{width:80%;transition-delay:1.6s}
+/* Variantes de diseño */
+.nh-stage[data-variant="original"] .nh-side{border-left:2px solid var(--acc);border-radius:0;padding-left:10px}
+.nh-stage[data-variant="original"] .nh-h{border-bottom:0;background:#F0E9FF;padding:3px 5px;border-radius:3px}
+.nh-stage[data-variant="classic"] .nh-top{flex-direction:column;text-align:center;border-bottom:1px solid #CDBFAE}
+.nh-stage[data-variant="classic"] .nh-photo,.nh-stage[data-variant="ats"] .nh-photo{display:none}
+.nh-stage[data-variant="classic"] .nh-name{font-weight:400;font-size:22px;letter-spacing:.5px}
+.nh-stage[data-variant="classic"] .nh-h{font-weight:700;letter-spacing:2px;border-bottom-color:#CDBFAE;color:#6E5A46}
+.nh-stage[data-variant="classic"] .nh-side{border-left:1px solid #DDD3C6;border-radius:0}
+.nh-stage[data-variant="ats"] .nh-top{border-bottom:1px solid #9CA3AF}
+.nh-stage[data-variant="ats"] .nh-body{display:block}
+.nh-stage[data-variant="ats"] .nh-side{padding:0;margin-top:12px}
+.nh-stage[data-variant="ats"] .nh-skills{flex-direction:row;flex-wrap:wrap}
+.nh-stage[data-variant="ats"] .nh-skills li{border:0;padding:0;border-radius:0}
+.nh-stage[data-variant="ats"] .nh-skills li:not(:last-child):after{content:" ·"}
+.nh-stage[data-variant="ats"] .nh-h{border-bottom-color:#9CA3AF}
+/* Timbre */
+.nh-stamp{position:absolute;right:16px;bottom:30px;z-index:5;font:900 15px/1.05 "Bricolage Grotesque","Lato",Arial,sans-serif;text-transform:uppercase;letter-spacing:.5px;text-align:center;
+ color:#D7263D;border:3px solid #D7263D;outline:2px solid #D7263D;outline-offset:3px;border-radius:8px;padding:8px 10px;background:#fff8;
+ transform:rotate(-14deg) scale(2.2);opacity:0;pointer-events:none;mix-blend-mode:multiply}
+.nh-front.is-stamped .nh-stamp{animation:nhStamp .42s cubic-bezier(.2,1.6,.5,1) forwards}
+.nh-front.is-stamped{animation:nhFloat 7s ease-in-out infinite,nhThump .3s .12s}
+/* Etiquetas flotantes */
+.nh-tag{position:absolute;z-index:6;display:flex;align-items:center;gap:7px;font:800 12px "Lato",Arial,sans-serif;color:var(--tinta);background:#fff;padding:9px 13px;border-radius:12px;box-shadow:0 14px 28px -10px #0008}
+.nh-tag i{color:var(--cobalto)}
+.nh-tag-a{left:-64px;top:22px;transform:rotate(-6deg);animation:nhBob 5s ease-in-out infinite}
+.nh-tag-b{right:-56px;top:190px;transform:rotate(5deg);background:var(--lima);animation:nhBob 6s .8s ease-in-out infinite}
+.nh-tag-b i{color:var(--tinta)}
+/* Selector de diseño */
+.nh-switch{display:flex;gap:6px;background:#ffffff1a;border:1px solid #ffffff2e;padding:5px;border-radius:999px}
+.nh-switch button{cursor:pointer;border:0;background:transparent;color:#E5E9FF;font:800 12.5px "Lato",Arial,sans-serif;padding:7px 13px;border-radius:999px;transition:background .2s,color .2s}
+.nh-switch button:hover{background:#ffffff22}
+.nh-switch button[aria-pressed="true"]{background:#fff;color:var(--cobalto)}
+@keyframes nhIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes nhMark{to{transform:rotate(-1.4deg) scaleX(1)}}
+@keyframes nhPulse{70%{box-shadow:0 0 0 9px #d9ff4d00}100%{box-shadow:0 0 0 0 #d9ff4d00}}
+@keyframes nhBlink{50%{opacity:0}}
+@keyframes nhPop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+@keyframes nhFloat{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes nhBob{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes nhStamp{0%{opacity:0;transform:rotate(-14deg) scale(2.2)}60%{opacity:1;transform:rotate(-14deg) scale(.92)}100%{opacity:.95;transform:rotate(-14deg) scale(1)}}
+@keyframes nhThump{50%{scale:.985}}
+@media(max-width:1000px){.nh-hero{grid-template-columns:1fr;min-height:0;gap:8px}.nh-stage{height:450px}.nh-copy{text-align:left}}
+@media(max-width:680px){.nh-hero{margin-top:12px;border-radius:22px;padding:28px 20px 20px}.nh-hero h1{font-size:clamp(34px,10vw,46px);letter-spacing:-1.2px}.nh-hero p{font-size:16px}
+ .nh-stage{height:410px}.nh-desk{transform:scale(.86)}.nh-tag-a{left:-20px}.nh-tag-b{right:-14px}.nh-actions>button{flex:1 1 auto;justify-content:center}}
+@media(max-width:380px){.nh-desk{transform:scale(.78)}.nh-stage{height:380px}.nh-tag{display:none}}
+@media(prefers-reduced-motion:reduce){.nh-copy,.nh-front,.nh-tag,.nh-pulse,.nh-caret{animation:none!important}.nh-mark:before{animation:none;transform:rotate(-1.4deg) scaleX(1)}.nh-line,.nh-role,.nh-contact,.nh-job,.nh-place,.nh-small,.nh-h{transition:none!important}}
 </style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6064939275867187" crossorigin="anonymous"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6064939275867187" crossorigin="anonymous"></script></head><body>
 <header><button type="button" id="homeLogo" class="brand-home" aria-label="MICV: volver a elegir plantilla" title="Volver a elegir plantilla">MI<span style="color:#75d4ff">CV</span></button></header>
-<div id="templateChooser" role="dialog" aria-modal="true" aria-labelledby="templateTitle"><div class="chooser-shell"><section class="chooser-hero" aria-label="Bienvenida a MICV"><div><div class="hero-kicker"><span class="hero-kicker-star">✦</span> DISEÑA TU PRÓXIMA OPORTUNIDAD <span class="hero-kicker-star">✦</span></div><h1>Un gran futuro merece un <span class="hero-highlight">gran currículum.</span></h1><p>Crea un CV profesional que hable de ti. Elige un diseño, personalízalo en minutos y descárgalo gratis.</p><div class="hero-actions"><button type="button" class="hero-cta" id="heroStart">Crear mi currículum <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button type="button" class="hero-secondary-cta" id="heroExplore">Explorar diseños <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></button></div><div class="hero-trust"><span><i class="fa-solid fa-circle-check"></i> Sin registro</span><span><i class="fa-solid fa-circle-check"></i> Sin marcas de agua</span><span><i class="fa-solid fa-circle-check"></i> Descarga PDF</span></div></div><div class="hero-stage" id="heroStage" aria-label="Muestra interactiva de plantillas MICV">
-<div class="hero-aura hero-aura-one" aria-hidden="true"></div><div class="hero-aura hero-aura-two" aria-hidden="true"></div>
-<div class="hero-side-note note-one" aria-hidden="true"><i class="fa-solid fa-sparkles"></i> Diseña a tu estilo</div>
-<div class="hero-side-note note-two" aria-hidden="true"><i class="fa-solid fa-circle-check"></i> Listo para descargar</div>
-<div class="hero-document-scene" id="heroScene">
-<div class="hero-sheet-shadow" aria-hidden="true"></div>
-<div class="hero-real-page" id="heroRealPage" aria-hidden="true">
-<div class="hero-cv-top"><span class="hero-photo-visual"><i class="fa-solid fa-user"></i></span><div class="hero-heading-copy"><span class="hero-name-line">TU NOMBRE</span><span class="hero-role-line">PERFIL PROFESIONAL</span><span class="hero-contact-line">contacto@ejemplo.com · Santiago</span></div></div>
-<div class="hero-cv-body"><div class="hero-cv-main"><div class="hero-cv-section-title">EXPERIENCIA</div><div class="hero-job-title">Experiencia profesional</div><div class="hero-job-company">Tu próxima oportunidad</div><span class="hero-cv-line w100"></span><span class="hero-cv-line w90"></span><span class="hero-cv-line w76"></span><div class="hero-job-title small">Formación y proyectos</div><span class="hero-cv-line w100"></span><span class="hero-cv-line w82"></span><span class="hero-cv-line w70"></span><div class="hero-cv-section-title second">EDUCACIÓN</div><span class="hero-cv-line w85"></span><span class="hero-cv-line w70"></span></div><div class="hero-cv-side"><div class="hero-cv-section-title">HABILIDADES</div><span class="hero-cv-line w90"></span><span class="hero-cv-line w80"></span><span class="hero-cv-line w100"></span><div class="hero-cv-section-title second">IDIOMAS</div><span class="hero-cv-line w90"></span><span class="hero-cv-line w70"></span><div class="hero-cv-section-title second">CONTACTO</div><span class="hero-cv-line w90"></span><span class="hero-cv-line w80"></span></div></div>
-</div></div>
-<div class="hero-stage-footer"><span class="hero-stage-indicator"><span class="hero-stage-dot"></span> VISTA DE PLANTILLA</span><div class="hero-style-buttons" role="group" aria-label="Cambiar la vista del diseño"><button type="button" class="hero-style-btn active" data-hero-style="modern" aria-label="Ver moderno profesional" aria-pressed="true"></button><button type="button" class="hero-style-btn" data-hero-style="original" aria-label="Ver original" aria-pressed="false"></button><button type="button" class="hero-style-btn" data-hero-style="classic" aria-label="Ver clásico elegante" aria-pressed="false"></button><button type="button" class="hero-style-btn" data-hero-style="ats" aria-label="Ver minimalista ATS" aria-pressed="false"></button></div></div></div></section><section class="chooser-intro" id="chooseSection"><div class="chooser-eyebrow">TODOS LOS DISEÑOS SON GRATUITOS</div><h2 id="templateTitle">Elige el estilo que te representa</h2><p>El mismo contenido, cuatro formas de presentarte. Puedes cambiar de diseño sin perder tu información.</p></section><div class="template-grid" id="templateGrid">
+<div id="templateChooser" role="dialog" aria-modal="true" aria-labelledby="templateTitle"><div class="chooser-shell"><section class="nh-hero" aria-label="Bienvenida a MICV"><div class="nh-copy"><div class="nh-kicker"><span class="nh-pulse" aria-hidden="true"></span>Editor de currículums gratuito</div><h1>Tu próximo trabajo empieza <span class="nh-mark">en esta hoja.</span></h1><p>Escribe tu experiencia, elige uno de los cuatro diseños y descarga un currículum listo para postular. Sin cuentas, sin marcas de agua y sin costo.</p><div class="nh-actions"><button type="button" class="nh-cta" id="heroStart">Crear mi currículum <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button type="button" class="nh-ghost" id="heroExplore">Ver los 4 diseños <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></button></div><ul class="nh-trust"><li><i class="fa-solid fa-check" aria-hidden="true"></i> Sin registro</li><li><i class="fa-solid fa-check" aria-hidden="true"></i> Sin marcas de agua</li><li><i class="fa-solid fa-check" aria-hidden="true"></i> PDF y LaTeX</li></ul></div>
+<div class="nh-stage" id="heroStage" data-variant="modern"><div class="nh-desk" aria-hidden="true"><div class="nh-sheet nh-back nh-back-2"></div><div class="nh-sheet nh-back nh-back-1"></div>
+<article class="nh-sheet nh-front" id="nhSheet"><div class="nh-top"><span class="nh-photo"><i class="fa-solid fa-user"></i></span><div class="nh-id"><div class="nh-name"><span id="nhName"></span><i class="nh-caret"></i></div><div class="nh-role" id="nhRole"></div><div class="nh-contact">correo@ejemplo.cl · <span id="nhCity"></span></div></div></div>
+<div class="nh-body"><div class="nh-main"><div class="nh-h">Experiencia</div><div class="nh-job" id="nhJob"></div><div class="nh-place" id="nhPlace"></div><span class="nh-line l1"></span><span class="nh-line l2"></span><span class="nh-line l3"></span><div class="nh-h nh-mt">Educación</div><div class="nh-job" id="nhEdu"></div><span class="nh-line l4"></span></div><div class="nh-side"><div class="nh-h">Habilidades</div><ul class="nh-skills" id="nhSkills"></ul><div class="nh-h nh-mt">Idiomas</div><div class="nh-small" id="nhLang"></div></div></div>
+<div class="nh-stamp" id="nhStamp">¡Llamado a<br>entrevista!</div></article>
+<div class="nh-tag nh-tag-a"><i class="fa-solid fa-plus"></i> Experiencia</div><div class="nh-tag nh-tag-b"><i class="fa-solid fa-file-arrow-down"></i> PDF listo</div></div>
+<div class="nh-switch" role="group" aria-label="Ver la demostración en otro diseño"><button type="button" data-hero-style="modern" aria-pressed="true">Moderno</button><button type="button" data-hero-style="original" aria-pressed="false">Original</button><button type="button" data-hero-style="classic" aria-pressed="false">Clásico</button><button type="button" data-hero-style="ats" aria-pressed="false">ATS</button></div></div></section><section class="chooser-intro" id="chooseSection"><div class="chooser-eyebrow">TODOS LOS DISEÑOS SON GRATUITOS</div><h2 id="templateTitle">Elige el estilo que te representa</h2><p>El mismo contenido, cuatro formas de presentarte. Puedes cambiar de diseño sin perder tu información.</p></section><div class="template-grid" id="templateGrid">
 <button type="button" class="template-card" data-template="modern"><span class="mini-page modern"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><span class="popular-tag"><i class="fa-solid fa-star" aria-hidden="true"></i> Más popular</span><strong>Moderno profesional</strong><span class="template-description">Encabezado más marcado, barra lateral suave y estética corporativa.</span></button>
 <button type="button" class="template-card" data-template="original"><span class="mini-page"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><strong>Original</strong><span class="template-description">Nuestro diseño actual: dos columnas, acentos morados, iconos y separadores.</span></button>
 <button type="button" class="template-card" data-template="classic"><span class="mini-page elegant"><span class="mini-head"></span><span class="mini-sub"></span><span class="mini-cols"><span><span class="mini-title"></span><span class="mini-line bold"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-line"></span></span><span><span class="mini-title"></span><span class="mini-line"></span><span class="mini-line small"></span><span class="mini-title"></span><span class="mini-line"></span></span></span></span><strong>Clásico elegante</strong><span class="template-description">Diseño editorial con tipografía clásica, encabezado centrado y columna lateral fina.</span></button>
@@ -644,23 +751,50 @@ function latexSkillIcon(skill){return '\\faIcon{'+(latexSkillIcons[skillIcon(ski
 function latex(){let color=(data.accent||'#5700b5').replace('#','').toUpperCase();let out=['\\documentclass[10pt,a4paper]{article}','\\usepackage[margin=1.4cm]{geometry}','\\usepackage{fontspec}','\\usepackage{xcolor}','\\usepackage{hyperref}','\\usepackage{fontawesome5}','\\hypersetup{hidelinks}','\\usepackage{paracol}','\\usepackage{enumitem}','\\setmainfont{Lato}','\\definecolor{accent}{HTML}{'+color+'}','\\setlength{\\parindent}{0pt}','\\newcommand{\\cvsection}[1]{\\vspace{12pt}{\\color{accent}\\bfseries\\large #1}\\par\\vspace{5pt}\\hrule\\vspace{8pt}}','\\begin{document}','{\\Huge\\bfseries\\color{accent} '+latexEscape(data.name)+'}\\par\\vspace{4pt}','{\\small '+latexEscape(data.role)+'}\\par\\vspace{8pt}','{\\footnotesize '+([data.email?'\\href{mailto:'+latexEscape(data.email)+'}{\\faEnvelope\\ '+latexEscape(data.email)+'}':'',data.phone?'\\href{tel:'+String(data.phone).replace(/[^+\\d]/g,'')+'}{\\faPhone\\ '+latexEscape(data.phone)+'}':'',String(data.whatsapp||data.phone||'').replace(/\D/g,'')?'\\href{https://wa.me/'+String(data.whatsapp||data.phone||'').replace(/\D/g,'')+'}{\\faWhatsapp\\ WhatsApp}':'',data.city?'\\faMapMarkerAlt\\ '+latexEscape(data.city):''].filter(Boolean).join(' \\quad '))+'}\\par','\\columnratio{0.68}','\\begin{paracol}{2}','\\cvsection{EXPERIENCIA LABORAL}'];if(data.profile&&data.profile.trim())out.splice(out.length-3,0,'\\\\cvsection{PERFIL PROFESIONAL}',latexEscape(data.profile));for(let j of data.jobs)out.push('\\textbf{'+latexEscape(j.title)+'}\\par','{\\color{accent}\\bfseries '+latexEscape(j.company)+'}\\par','{\\footnotesize \\faCalendarAlt\\ '+latexEscape(j.dates)+' \\hfill \\faMapMarkerAlt\\ '+latexEscape(j.place)+'}\\par','{\\small '+latexEscape(j.description)+'}\\par\\vspace{8pt}\\noindent{\\color{black!20}\\rule{\\linewidth}{0.35pt}}\\par\\vspace{8pt}');out.push('\\switchcolumn','\\cvsection{CONOCIMIENTOS TÉCNICOS}');for(let s of data.skills)out.push('\\noindent{\\color{accent}'+latexSkillIcon(s)+'}\\hspace{5pt}\\textbf{'+latexEscape(s.title)+'}\\par {\\small '+latexEscape(s.detail)+'}\\par\\vspace{5pt}{\\color{black!18}\\dotfill}\\par\\vspace{5pt}');out.push('\\cvsection{DISPONIBILIDAD}',latexEscape(data.availability),'\\cvsection{IDIOMAS}');for(let x of data.languages)out.push('\\textbf{'+latexEscape(x.title)+'}\\par '+latexEscape(x.detail)+'\\par\\vspace{5pt}{\\color{black!18}\\dotfill}\\par\\vspace{5pt}');out.push('\\cvsection{EDUCACIÓN}');for(let x of data.education)out.push('\\textbf{'+latexEscape(x.title)+'}\\par '+latexEscape(x.detail)+'\\par\\vspace{9pt}');out.push('\\end{paracol}','\\end{document}');return out.join('\n')}
 document.getElementById('tex').onclick=()=>{let blob=new Blob([latex()],{type:'text/plain;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='curriculum.tex';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
 
-/* Portada: muestra ilustrativa interactiva, sin modificar las cuatro plantillas reales */
+/* Portada: hoja que se escribe sola y recorre los cuatro diseños */
 const heroStage=document.getElementById('heroStage');
 const heroOptions=['modern','original','classic','ats'];
-let heroCurrent=0,heroRotation=null;
+const heroPeople={
+ modern:{name:'Camila Rojas',role:'Operaria de bodega',city:'Pudahuel',job:'Picking y packing',place:'Centro de distribución · 2022 – hoy',edu:'Técnico en Logística',skills:['WMS','Grúa horquilla','Inventario'],lang:'Español nativo'},
+ original:{name:'Diego Muñoz',role:'Analista de datos junior',city:'Ñuñoa',job:'Práctica en análisis de datos',place:'Empresa de retail · 2025',edu:'Ingeniería en Estadística',skills:['Excel avanzado','SQL','Power BI'],lang:'Inglés intermedio'},
+ classic:{name:'Valentina Soto',role:'Técnica en enfermería',city:'Maipú',job:'Atención de pacientes',place:'CESFAM · 2021 – hoy',edu:'TENS, nivel superior',skills:['Signos vitales','Curaciones','Trato al paciente'],lang:'Inglés básico'},
+ ats:{name:'Matías González',role:'Primer empleo · Atención al cliente',city:'Puente Alto',job:'Proyecto de título',place:'Liceo técnico · 2025',edu:'Técnico en Administración',skills:['Atención al cliente','Office','Trabajo en equipo'],lang:'Inglés básico'}
+};
+const heroSheet=document.getElementById('nhSheet');
+const heroReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let heroCurrent=0,heroTimers=[],heroPaused=false;
+const heroLater=(fn,ms)=>heroTimers.push(setTimeout(fn,ms));
+function heroClear(){heroTimers.forEach(clearTimeout);heroTimers=[]}
 function showHeroStyle(style){
  if(!heroOptions.includes(style))return;
- heroCurrent=heroOptions.indexOf(style);
+ heroClear();heroCurrent=heroOptions.indexOf(style);
+ const p=heroPeople[style];
  heroStage.dataset.variant=style;
- heroStage.querySelectorAll('[data-hero-style]').forEach(button=>{const active=button.dataset.heroStyle===style;button.classList.toggle('active',active);button.setAttribute('aria-pressed',active?'true':'false')});
+ heroStage.querySelectorAll('[data-hero-style]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.heroStyle===style?'true':'false'));
+ heroSheet.classList.remove('is-writing','is-stamped');
+ const set=(id,t)=>{document.getElementById(id).textContent=t};
+ set('nhRole',p.role);set('nhCity',p.city);set('nhJob',p.job);set('nhPlace',p.place);set('nhEdu',p.edu);set('nhLang',p.lang);
+ const ul=document.getElementById('nhSkills');ul.textContent='';
+ const nameEl=document.getElementById('nhName');
+ const addSkill=t=>{const li=document.createElement('li');li.textContent=t;ul.appendChild(li)};
+ if(heroReduced){nameEl.textContent=p.name;p.skills.forEach(addSkill);heroSheet.classList.add('is-writing','is-stamped');return}
+ nameEl.textContent='';
+ const step=58,typed=p.name.length*step+250;
+ [...p.name].forEach((ch,i)=>heroLater(()=>{nameEl.textContent+=ch},250+i*step));
+ heroLater(()=>heroSheet.classList.add('is-writing'),typed);
+ p.skills.forEach((t,i)=>heroLater(()=>addSkill(t),typed+650+i*170));
+ heroLater(()=>heroSheet.classList.add('is-stamped'),typed+2300);
+ heroLater(heroNext,typed+4800);
 }
-function stopHeroRotation(){if(heroRotation!==null){clearInterval(heroRotation);heroRotation=null}}
-function startHeroRotation(){stopHeroRotation();if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;heroRotation=setInterval(()=>{if(document.getElementById('templateChooser').hidden||document.hidden)return;showHeroStyle(heroOptions[(heroCurrent+1)%heroOptions.length])},5200)}
-heroStage.querySelectorAll('[data-hero-style]').forEach(button=>button.addEventListener('click',()=>{showHeroStyle(button.dataset.heroStyle);startHeroRotation()}));
-heroStage.addEventListener('mouseenter',stopHeroRotation);
-heroStage.addEventListener('mouseleave',startHeroRotation);
+function heroNext(){
+ if(heroPaused||document.hidden||document.getElementById('templateChooser').hidden){heroLater(heroNext,1500);return}
+ showHeroStyle(heroOptions[(heroCurrent+1)%heroOptions.length]);
+}
+heroStage.querySelectorAll('[data-hero-style]').forEach(b=>b.addEventListener('click',()=>showHeroStyle(b.dataset.heroStyle)));
+heroStage.addEventListener('mouseenter',()=>{heroPaused=true});
+heroStage.addEventListener('mouseleave',()=>{heroPaused=false});
 document.getElementById('heroExplore').addEventListener('click',()=>document.getElementById('chooseSection').scrollIntoView({behavior:'smooth',block:'start'}));
-showHeroStyle('modern');startHeroRotation();
+showHeroStyle('modern');
 
 
 /* Al imprimir el diseño Moderno se crea una hoja A4 independiente del editor.
