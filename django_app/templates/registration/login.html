@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titulo %}Entrar{% endblock %}
+{% block clase_main %}tarjeta-centro{% endblock %}
+{% block contenido %}
+<section class="tarjeta">
+  <h1>Entrar a MICV</h1>
+  <p class="bajada">Inicia sesión para guardar tus currículums y abrirlos desde cualquier dispositivo.</p>
+  <form method="post">
+    {% csrf_token %}
+    {% include "_formulario.html" %}
+    <input type="hidden" name="next" value="{{ next }}">
+    <button type="submit" class="boton">Entrar</button>
+  </form>
+  <p class="enlaces">
+    <a href="{% url 'recuperar_contrasena' %}">¿Olvidaste tu contraseña?</a><br>
+    ¿No tienes cuenta? <a href="{% url 'registro' %}{% if next %}?next={{ next|urlencode }}{% endif %}">Créala gratis</a>
+  </p>
+</section>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block titulo %}Borrar CV{% endblock %}
+{% block clase_main %}tarjeta-centro{% endblock %}
+{% block contenido %}
+<section class="tarjeta">
+  <h1>¿Borrar «{{ cv.titulo }}»?</h1>
+  <p>Se borrará de tu cuenta y no se puede deshacer. Si quieres conservar una copia, ábrelo antes y descárgalo en PDF.</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="boton peligro">Sí, borrar</button>
+    <a class="boton secundario" href="{% url 'mis_cvs' %}">Cancelar</a>
+  </form>
+</section>
+{% endblock %}

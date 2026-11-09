@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block titulo %}Mis CVs{% endblock %}
+{% block contenido %}
+<div class="cabecera-lista">
+  <div>
+    <p class="eyebrow">Tu cuenta · {{ user.username }}</p>
+    <h1>Mis CVs</h1>
+  </div>
+  <a class="boton" href="/?nuevo=1">+ Crear un CV nuevo</a>
+</div>
+
+{% if cvs %}
+  <ul class="lista-cvs">
+    {% for cv in cvs %}
+      <li class="cv-item">
+        <div class="cv-info">
+          <a class="cv-titulo" href="/?cv={{ cv.pk }}">{{ cv.titulo }}</a>
+          <span class="cv-meta">{{ cv.plantilla }} · actualizado {{ cv.actualizado|date:"j \d\e F \d\e Y, H:i" }}</span>
+        </div>
+        <div class="cv-acciones">
+          <a class="boton" href="/?cv={{ cv.pk }}">Abrir en el editor</a>
+          <a class="boton secundario" href="{% url 'renombrar_cv' cv.pk %}">Renombrar</a>
+          <a class="boton peligro" href="{% url 'borrar_cv' cv.pk %}">Borrar</a>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <div class="vacio">
+    <h2>Todavía no tienes CVs guardados</h2>
+    <p>Crea tu currículum en el editor y toca <strong>«Guardar en mi cuenta»</strong>. Aparecerá aquí para que lo abras cuando quieras.</p>
+    <a class="boton" href="/">Ir al editor</a>
+  </div>
+{% endif %}
+
+<p class="enlaces"><a href="{% url 'cambiar_contrasena' %}">Cambiar mi contraseña</a></p>
+{% endblock %}

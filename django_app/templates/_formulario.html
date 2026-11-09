@@ -1,0 +1,12 @@
+{# Dibuja los campos de cualquier formulario de Django con sus errores. #}
+{% if form.non_field_errors %}
+  <div class="error-general" role="alert">{% for e in form.non_field_errors %}<p>{{ e }}</p>{% endfor %}</div>
+{% endif %}
+{% for campo in form %}
+  <div class="campo{% if campo.errors %} con-error{% endif %}">
+    <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+    {{ campo }}
+    {% if campo.help_text %}<div class="ayuda">{{ campo.help_text|safe }}</div>{% endif %}
+    {% for e in campo.errors %}<p class="error">{{ e }}</p>{% endfor %}
+  </div>
+{% endfor %}

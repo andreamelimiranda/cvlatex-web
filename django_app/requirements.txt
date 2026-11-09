@@ -1,0 +1,7 @@
+# Paquetes que necesita MICV en Django. Instálalos con:
+#   pip install -r requirements.txt
+Django>=5.2,<5.3          # versión 5.2 LTS (soporte hasta abril de 2028)
+whitenoise>=6.6           # sirve los archivos CSS/JS en el servidor
+gunicorn>=22.0            # servidor web para producción (Render)
+dj-database-url>=2.1      # lee la base de datos desde DATABASE_URL
+psycopg[binary]>=3.1      # conexión con PostgreSQL

@@ -13,6 +13,10 @@ Editor gratuito de currículums inspirado en un CV profesional de dos columnas.
 
 **Importante:** El botón PDF actualmente usa la impresión del navegador: el PDF todavía no está compilado directamente desde LaTeX. La plantilla LaTeX y la vista previa HTML pueden tener diferencias de diseño.
 
+## Versión Django (en desarrollo, rama `django`)
+La carpeta `django_app/` contiene MICV como proyecto Django 5.2 con cuentas de usuario: registro, inicio de sesión, recuperación de contraseña y la opción de guardar varios CVs por persona. Usa los mismos archivos HTML de este repositorio. La guía completa (cómo probarlo, cómo funciona y cómo publicarlo gratis en Render + Neon) está en [`django_app/GUIA.md`](django_app/GUIA.md).
+
+
 ## Publicación
 El sitio se publica en **Cloudflare Workers** (Worker `micv`, dominio `micvpremium.cl`) usando recursos estáticos, sin proceso de compilación. La configuración está en `wrangler.jsonc`: la carpeta publicada es la raíz del repositorio.
 

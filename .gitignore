@@ -1,0 +1,8 @@
+# Archivos que no se suben a GitHub
+__pycache__/
+*.pyc
+django_app/db.sqlite3
+django_app/staticfiles/
+.env
+.venv/
+venv/

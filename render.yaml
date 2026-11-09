@@ -1,0 +1,25 @@
+# Configuración para publicar MICV (Django) en Render con el plan gratuito.
+# Render lee este archivo al crear un «Blueprint» desde el repositorio.
+services:
+  - type: web
+    name: micv
+    runtime: python
+    plan: free
+    branch: django
+    buildCommand: ./django_app/build.sh
+    startCommand: cd django_app && gunicorn micv.wsgi:application
+    envVars:
+      - key: ENTORNO
+        value: produccion
+      - key: DEBUG
+        value: "0"
+      - key: SECRET_KEY
+        generateValue: true          # Render inventa una clave segura
+      - key: DATABASE_URL
+        sync: false                  # la pegas tú: la dirección de tu base en Neon
+      - key: ALLOWED_HOSTS
+        value: micvpremium.cl,www.micvpremium.cl
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://micvpremium.cl,https://www.micvpremium.cl
+      - key: WEB_CONCURRENCY
+        value: "2"
