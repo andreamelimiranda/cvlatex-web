@@ -4,3 +4,6 @@
 .assetsignore
 README.md
 wrangler.jsonc
+django_app
+render.yaml
+.gitignore

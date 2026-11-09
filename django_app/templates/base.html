@@ -1,0 +1,46 @@
+{% load static %}<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{% block titulo %}Mi cuenta{% endblock %} | MICV</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="{% static 'cvs/sitio.css' %}">
+</head>
+<body>
+{# Encabezado común: el mismo estilo que las guías del sitio #}
+<header class="site-header">
+  <a class="brand" href="/" aria-label="MICV, ir al editor">MI<span>CV</span></a>
+  <nav aria-label="Navegación principal">
+    <a href="/">Crear CV</a>
+    <a href="/recursos.html">Recursos laborales</a>
+    {% if user.is_authenticated %}
+      <a href="{% url 'mis_cvs' %}">Mis CVs</a>
+      <form method="post" action="{% url 'salir' %}" class="inline-form">
+        {% csrf_token %}<button type="submit" class="link-button">Salir</button>
+      </form>
+    {% else %}
+      <a href="{% url 'entrar' %}">Entrar</a>
+      <a href="{% url 'registro' %}" class="nav-cta">Crear cuenta</a>
+    {% endif %}
+  </nav>
+</header>
+
+<main class="contenido {% block clase_main %}{% endblock %}">
+  {% if messages %}
+    <ul class="mensajes" role="status">
+      {% for m in messages %}<li class="mensaje {{ m.tags }}">{{ m }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+  {% block contenido %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 MICV · Editor de currículums gratuito</span>
+  <a href="/guia-cv.html">Guía para crear tu CV</a>
+  <a href="/privacidad.html">Política de privacidad</a>
+  <a href="/contacto.html">Contacto</a>
+</footer>
+</body>
+</html>

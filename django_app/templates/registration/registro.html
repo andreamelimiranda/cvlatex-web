@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}Crear cuenta{% endblock %}
+{% block clase_main %}tarjeta-centro{% endblock %}
+{% block contenido %}
+<section class="tarjeta">
+  <h1>Crea tu cuenta gratis</h1>
+  <p class="bajada">Con una cuenta puedes guardar varios CVs, editarlos cuando quieras y abrirlos desde tu celular o tu computador.</p>
+  <form method="post">
+    {% csrf_token %}
+    {% include "_formulario.html" %}
+    <input type="hidden" name="next" value="{{ next }}">
+    <button type="submit" class="boton">Crear cuenta</button>
+  </form>
+  <p class="enlaces">¿Ya tienes cuenta? <a href="{% url 'entrar' %}{% if next %}?next={{ next|urlencode }}{% endif %}">Entra aquí</a></p>
+</section>
+{% endblock %}

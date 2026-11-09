@@ -1,0 +1,50 @@
+/* Estilos de las páginas de cuenta (entrar, registro, Mis CVs).
+   Usan los mismos colores y encabezado que las guías del sitio. */
+:root{--azul:#11263e;--celeste:#75d4ff;--morado:#8863df;--tinta:#27334a;--suave:#69788a;--borde:#dde3ec;--fondo:#f5f7fb;--rojo:#c43b3b;--verde:#2e8a5f}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Lato",Arial,sans-serif;color:var(--tinta);background:var(--fondo);line-height:1.55}
+a{color:#4b3cc0}
+.site-header{background:var(--azul);padding:18px max(20px,calc((100vw - 1050px)/2));display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 20px}
+.site-header .brand{font-size:24px;font-weight:900;color:#fff;text-decoration:none}
+.site-header .brand span{color:var(--celeste)}
+.site-header nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;font-size:14px}
+.site-header nav a,.link-button{color:#c6d8e9;text-decoration:none;background:none;border:0;font:inherit;cursor:pointer;padding:0}
+.site-header nav a:hover,.link-button:hover{color:#fff}
+.site-header .nav-cta{background:var(--celeste);color:var(--azul);font-weight:900;padding:7px 12px;border-radius:8px}
+.inline-form{display:inline}
+.contenido{max-width:900px;margin:0 auto;padding:34px 18px 48px}
+.tarjeta-centro{max-width:520px}
+.tarjeta{background:#fff;border:1px solid var(--borde);border-radius:16px;padding:28px 26px;box-shadow:0 10px 30px -18px #1d2b5c55}
+h1{font-size:28px;line-height:1.15;margin:0 0 8px;color:var(--azul)}
+.bajada{color:var(--suave);margin:0 0 18px}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;color:var(--morado);margin:0 0 4px}
+.campo{margin:0 0 14px;display:flex;flex-direction:column;gap:5px}
+.campo label{font-weight:700;font-size:14px}
+.campo input{font:inherit;padding:11px 12px;border:1.5px solid var(--borde);border-radius:10px;background:#fff}
+.campo input:focus{outline:none;border-color:var(--morado);box-shadow:0 0 0 3px #8863df33}
+.con-error input{border-color:var(--rojo)}
+.ayuda{font-size:13px;color:var(--suave)}.ayuda ul{margin:4px 0;padding-left:18px}
+.error,.error-general{color:var(--rojo);font-size:14px;margin:0}
+.error-general{background:#fdecec;border-radius:10px;padding:10px 12px;margin-bottom:14px}
+.boton{display:inline-flex;align-items:center;justify-content:center;gap:6px;font:900 15px "Lato",Arial,sans-serif;color:#fff;background:var(--morado);border:0;border-radius:10px;padding:11px 18px;text-decoration:none;cursor:pointer}
+.boton:hover{filter:brightness(1.07)}
+.boton.secundario{background:#eef1f7;color:var(--tinta)}
+.boton.peligro{background:#fbe9e9;color:var(--rojo)}
+form .boton+.boton{margin-left:8px}
+.boton:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--celeste);outline-offset:2px}
+.enlaces{margin-top:18px;font-size:14px;color:var(--suave)}
+.mensajes{list-style:none;padding:0;margin:0 0 18px}
+.mensaje{background:#e8f6ef;color:var(--verde);border-radius:10px;padding:10px 14px;font-weight:700}
+.cabecera-lista{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.lista-cvs{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.cv-item{background:#fff;border:1px solid var(--borde);border-radius:14px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.cv-info{min-width:0;display:flex;flex-direction:column}
+.cv-titulo{font-size:18px;font-weight:900;color:var(--azul);text-decoration:none;overflow-wrap:anywhere}
+.cv-meta{font-size:13px;color:var(--suave)}
+.cv-acciones{display:flex;gap:8px;flex-wrap:wrap}
+.cv-acciones .boton{padding:8px 13px;font-size:14px}
+.vacio{background:#fff;border:2px dashed var(--borde);border-radius:16px;padding:30px;text-align:center}
+.vacio h2{margin-top:0;color:var(--azul)}
+.site-footer{max-width:1050px;margin:0 auto;padding:22px 18px 34px;border-top:1px solid #d9e1e9;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;font-size:14px;color:var(--suave)}
+.site-footer a{color:#45617c}
+@media(max-width:560px){.tarjeta{padding:22px 18px}.cv-acciones{width:100%}.cv-acciones .boton{flex:1}}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}Renombrar CV{% endblock %}
+{% block clase_main %}tarjeta-centro{% endblock %}
+{% block contenido %}
+<section class="tarjeta">
+  <h1>Renombrar «{{ cv.titulo }}»</h1>
+  <p class="bajada">Un buen nombre te ayuda a encontrarlo, por ejemplo «CV bodega – noviembre».</p>
+  <form method="post">
+    {% csrf_token %}
+    {% include "_formulario.html" %}
+    <button type="submit" class="boton">Guardar nombre</button>
+    <a class="boton secundario" href="{% url 'mis_cvs' %}">Cancelar</a>
+  </form>
+</section>
+{% endblock %}

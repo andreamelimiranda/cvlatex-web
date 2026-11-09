@@ -1,0 +1,17 @@
+/* Estilos de los elementos que agrega cuenta.js en las páginas públicas. */
+.micv-header-con-cuenta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.micv-cuenta{display:inline-flex;align-items:center;gap:14px;font:700 14px "Lato",Arial,sans-serif}
+.micv-cuenta a{color:#c6d8e9!important;text-decoration:none}
+.micv-cuenta a:hover{color:#fff!important}
+.micv-cuenta .micv-cuenta-principal{background:#75d4ff;color:#11263e!important;padding:7px 12px;border-radius:8px}
+.micv-salir{display:inline;margin:0}
+.micv-salir button{all:unset;cursor:pointer;color:#c6d8e9;font:700 14px "Lato",Arial,sans-serif}
+.micv-salir button:hover{color:#fff}
+.micv-cuenta a:focus-visible,.micv-salir button:focus-visible,.micv-guardar:focus-visible{outline:2px solid #75d4ff;outline-offset:3px}
+.micv-guardar{background:#1E37E6!important;color:#fff!important;font-weight:800!important}
+.micv-guardar:disabled{opacity:.6;cursor:wait}
+.micv-aviso{font-size:13px;margin:8px 0 0;color:#53647a}
+.micv-aviso.ok{color:#1d7a50}
+.micv-aviso.error{color:#c43b3b}
+.micv-aviso a{font-weight:700}
+@media print{.micv-cuenta,.micv-guardar,.micv-aviso{display:none!important}}
