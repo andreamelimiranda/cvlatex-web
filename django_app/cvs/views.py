@@ -42,6 +42,7 @@ PAGINAS = {
     "errores-curriculum",
     "contacto",
     "privacidad",
+    "opinion",
 }
 ARCHIVOS_PLANOS = {
     "ads.txt": "text/plain",
